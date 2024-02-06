@@ -1,8 +1,6 @@
 package cookies;
 
 // treat like Employee java but for cookies with Arrays
-import java.util.ArrayList;
-
 /*
  * Declare your ArrayList and name it orders
 * MAYBE - Create an empty constructor and the following methods
@@ -16,28 +14,25 @@ public void showOrder() to traverse and print the ArrayList
  */
 public abstract class MasterOrder {
     int totalBoxes;
+    int numBoxes;
     int varietyBoxes;
     String variety;
 
-    ArrayList<CookieOrder> cookieFlavors = new ArrayList<CookieOrder>();
-    cookieFlavors.add("Samoas");
-
-
-    public MasterOrder(int totalBoxes, int varietyBoxes, String variety, ArrayList<CookieOrder> cookieFlavors) {
+    public MasterOrder(int totalBoxes, int varietyBoxes, String variety) {
         this.totalBoxes = totalBoxes;
         this.varietyBoxes = varietyBoxes;
         this.variety = variety;
-        this.cookieFlavors = cookieFlavors;
+        this.numBoxes = numBoxes;
 
     }
 
-    public String getVariety() {
-        return this.variety;
-    }
+    // public String getVariety() {
+    // return this.variety;
+    // }
 
-    public void setVariety(String variety) {
-        this.variety = variety;
-    }
+    // public void setVariety(String variety) {
+    // this.variety = variety;
+    // }
 
     public int getTotalBoxes() {
         return this.totalBoxes;
@@ -57,6 +52,12 @@ public abstract class MasterOrder {
 
     public void showOrder(String cookieFlavors) {
 
+    }
+
+    @Override
+    public String toString() {
+        return "MasterOrder [totalBoxes=" + totalBoxes + ", varietyBoxes=" + varietyBoxes
+                + "]";
     }
 
     public abstract String cookies();
