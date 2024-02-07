@@ -1,6 +1,7 @@
 package cookies;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 // treat like HospitalApp with Mclean and McDream that will feed into MasterORder and CookieOrder
 
@@ -13,12 +14,24 @@ Show the updated list
  */
 public class OrderApp {
     public static void main(String[] args) {
-        ArrayList<String> cookieFlavors = new ArrayList<String>();
+        Scanner yummy = new Scanner(System.in);
+        ArrayList<String> orders = new ArrayList<String>();
 
-        cookieFlavors.add("Samoas");
-        cookieFlavors.add("Thin Mints");
-        cookieFlavors.add("Girl Scout S'mores");
-        cookieFlavors.add("Adventurefuls");
+        orders.add("Samoas");
+        orders.add("Thin Mints");
+        orders.add("Girl Scout S'mores");
+        orders.add("Adventurefuls");
+        System.out.println("Current Order");
+        System.out.println("Variety: " + orders.get(0));
+        System.out.println("Variety: " + orders.get(1));
+        System.out.println("Variety: " + orders.get(2));
+        System.out.println("Variety: " + orders.get(3));
+        yummy.close();
+
+        // CookieOrder orderNumberOne = new CookieOrder(null, 0, 0, null, 0);
+
+        //
+        //
 
     }
 }
