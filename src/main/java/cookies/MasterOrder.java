@@ -12,20 +12,14 @@ you need to consider this when traversing your collection (you don't want to ove
 public void showOrder() to traverse and print the ArrayList
  */
 public abstract class MasterOrder {
-
+    String variety;
+    int varietyBoxes;
     int totalBoxes;
 
-    int numBoxes1 = 5;
-    int numBoxes2 = 5;
-    int numBoxes3 = 4;
-    int numBoxes4 = 8;
-    int varietyBoxes;
-    String variety;
-
-    public MasterOrder(int totalBoxes, int varietyBoxes, String variety) {
-        this.totalBoxes = totalBoxes;
-        this.varietyBoxes = varietyBoxes;
+    public MasterOrder(String variety, int varietyBoxes, int totalBoxes) {
         this.variety = variety;
+        this.varietyBoxes = varietyBoxes;
+        this.totalBoxes = totalBoxes;
         // this.numBoxes1 = numBoxes1;
 
     }
@@ -47,14 +41,6 @@ public abstract class MasterOrder {
 
     public void setTotalBoxes(int totalBoxes) {
         this.totalBoxes = totalBoxes;
-    }
-
-    public int getNumBoxes1() {
-        return this.numBoxes1;
-    }
-
-    public void setNumBoxes1(int numBoxes1) {
-        this.numBoxes1 = numBoxes1;
     }
 
     public int getVarietyBoxes(String variety) {
