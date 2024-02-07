@@ -15,18 +15,17 @@ Show the updated list
 public class OrderApp {
     public static void main(String[] args) {
         Scanner yummy = new Scanner(System.in);
-        // CookieOrder
         ArrayList<CookieOrder> orders = new ArrayList<CookieOrder>();
 
-        orders.add(Samoas);
+        // orders.add("Samoas");
         // orders.add("Thin Mints");
         // orders.add("Girl Scout S'mores");
         // orders.add("Adventurefuls");
-        System.out.println("Current Order");
-        System.out.println("Variety: " + orders.get(0));
-        System.out.println("Variety: " + orders.get(1));
-        System.out.println("Variety: " + orders.get(2));
-        System.out.println("Variety: " + orders.get(3));
+        // System.out.println("Current Order");
+        // System.out.println("Variety: " + orders.get(0));
+        // System.out.println("Variety: " + orders.get(1));
+        // System.out.println("Variety: " + orders.get(2));
+        // System.out.println("Variety: " + orders.get(3));
 
         // Get a specific favorite movie by index
         // String firstFavoriteMovie = favoriteMovies.get(9);
