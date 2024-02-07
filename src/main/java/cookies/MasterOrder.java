@@ -1,8 +1,7 @@
 package cookies;
 
-// treat like Employee java but for cookies with Arrays
 /*
- * Declare your ArrayList and name it orders
+ * DONE! - Declare your ArrayList and name it orders
 * MAYBE - Create an empty constructor and the following methods
 public void addOrder(CookieOrder theOrder) add an order to the list showing variety and quantity
  * DONE - public int getTotalBoxes() keep track of total boxes ordered
@@ -13,8 +12,12 @@ you need to consider this when traversing your collection (you don't want to ove
 public void showOrder() to traverse and print the ArrayList
  */
 public abstract class MasterOrder {
+
     int totalBoxes;
-    int numBoxes;
+    int numBoxes1 = 5;
+    int numBoxes2 = 5;
+    int numBoxes3 = 4;
+    int numBoxes4 = 8;
     int varietyBoxes;
     String variety;
 
@@ -22,7 +25,7 @@ public abstract class MasterOrder {
         this.totalBoxes = totalBoxes;
         this.varietyBoxes = varietyBoxes;
         this.variety = variety;
-        this.numBoxes = numBoxes;
+        this.numBoxes1 = numBoxes1;
 
     }
 
@@ -40,6 +43,14 @@ public abstract class MasterOrder {
 
     public void setTotalBoxes(int totalBoxes) {
         this.totalBoxes = totalBoxes;
+    }
+
+    public int getNumBoxes1() {
+        return this.numBoxes1;
+    }
+
+    public void setNumBoxes1(int numBoxes1) {
+        this.numBoxes1 = numBoxes1;
     }
 
     public int getVarietyBoxes() {
@@ -60,5 +71,5 @@ public abstract class MasterOrder {
                 + "]";
     }
 
-    public abstract String cookies();
+    public abstract String CookieOrder();
 }
