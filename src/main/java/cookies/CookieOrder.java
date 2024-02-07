@@ -1,7 +1,7 @@
 package cookies;
 
 // treat like doctor towards MasterOrder
-public class CookieOrder extends MasterOrder {
+public abstract class CookieOrder extends MasterOrder {
     String varietyOfCookie;
     int numBoxes;
 

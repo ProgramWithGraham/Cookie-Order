@@ -26,11 +26,12 @@ public class OrderApp {
         System.out.println("Variety: " + orders.get(1));
         System.out.println("Variety: " + orders.get(2));
         System.out.println("Variety: " + orders.get(3));
-
-        // Get a specific favorite movie by index
-        // String firstFavoriteMovie = favoriteMovies.get(9);
-        // System.out.println("Our first favorite movie is " + firstFavoriteMovie);
-
         yummy.close();
+
+        // CookieOrder orderNumberOne = new CookieOrder(null, 0, 0, null, 0);
+
+        //
+        //
+
     }
 }
