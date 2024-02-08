@@ -1,14 +1,14 @@
 package cookies;
 
 // treat like doctor towards MasterOrder
-public abstract class CookieOrder extends MasterOrder {
+public class CookieOrder {
     String varietyOfCookie;
     int numBoxes;
 
-    public CookieOrder(String variety, int varietyBoxes, int totalBoxes, String varietyOfCookie, int numBoxes) {
-        super(variety, varietyBoxes, totalBoxes);
-        this.numBoxes = numBoxes;
+    public CookieOrder(String varietyOfCookie, int numBoxes) {
         this.varietyOfCookie = varietyOfCookie;
+        this.numBoxes = numBoxes;
+
     }
 
     public String getVarietyOfCookie() {
