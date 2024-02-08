@@ -23,6 +23,7 @@ public class OrderApp {
 
         System.out.println("Current Order");
         System.out.println(beckyOrderSheet.getOrders());
+        System.out.println(beckyOrderSheet.getTotalBoxes());
         // System.out.println("Variety: " + orders.get(0));
         // System.out.println("Variety: " + orders.get(1));
         // System.out.println("Variety: " + orders.get(2));

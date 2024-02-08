@@ -29,6 +29,19 @@ public class MasterOrder {
 
     }
 
+    public void removeVariety(String varietyToRemove) {
+        int counter = 0;
+        while (counter < orders.size()) {
+            CookieOrder orderAtThisIndex = orders.get(counter);
+            String thisOrdersVariety = orderAtThisIndex.getVarietyOfCookie();
+            if (thisOrdersVariety.equals(varietyToRemove)) {
+                orders.remove(counter);
+                counter--;
+            }
+            counter++;
+        }
+    }
+
     public void addOrder(CookieOrder theOrder) {
         this.orders.add(theOrder);
     }
