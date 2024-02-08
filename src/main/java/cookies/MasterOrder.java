@@ -1,5 +1,7 @@
 package cookies;
 
+import java.util.ArrayList;
+
 /*
  *Declare your ArrayList and name it orders
 *Create an empty constructor and the following methods
@@ -11,60 +13,42 @@ you need to consider this when traversing your collection (you don't want to ove
 * DONE!- public int getVarietyBoxes(String variety) returns the total boxes of a given variety.
 public void showOrder() to traverse and print the ArrayList
  */
-public abstract class MasterOrder {
-    String variety;
-    int varietyBoxes;
-    int totalBoxes;
+public class MasterOrder {
 
-    public MasterOrder(String variety, int varietyBoxes, int totalBoxes) {
-        this.variety = variety;
-        this.varietyBoxes = varietyBoxes;
-        this.totalBoxes = totalBoxes;
-        // this.numBoxes1 = numBoxes1;
+    ArrayList<CookieOrder> orders = new ArrayList<CookieOrder>();
+
+    public ArrayList<CookieOrder> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(ArrayList<CookieOrder> orders) {
+        this.orders = orders;
+    }
+
+    public MasterOrder() {
 
     }
 
     public void addOrder(CookieOrder theOrder) {
-    }
-
-    public String getVariety() {
-        return this.variety;
-    }
-
-    public void setVariety(String variety) {
-        this.variety = variety;
+        this.orders.add(theOrder);
     }
 
     public int getTotalBoxes() {
-        return this.totalBoxes;
-    }
-
-    public void setTotalBoxes(int totalBoxes) {
-        this.totalBoxes = totalBoxes;
-    }
-
-    public int getVarietyBoxes(String variety) {
-        return this.varietyBoxes;
-    }
-
-    public void setVarietyBoxes(int varietyBoxes) {
-        this.varietyBoxes = varietyBoxes;
+        int totalBoxesSold = 0;
+        for (int orderIncrementor = 0; orderIncrementor < orders.size(); orderIncrementor++) {
+            CookieOrder orderAtThisIndex = orders.get(orderIncrementor);
+            totalBoxesSold += orderAtThisIndex.getNumBoxes();
+        }
+        return totalBoxesSold;
     }
 
     public void showOrder() {
 
     }
 
-    public void removeVariety(String variety) {
-        this.variety = variety;
-
-    }
-
-    @Override
-    public String toString() {
-        return "MasterOrder [totalBoxes=" + totalBoxes + ", varietyBoxes=" + varietyBoxes
-                + "]";
-    }
+    // @Override
+    // public String toString()
+    // }
 
     // public abstract String CookieOrder();
 }
