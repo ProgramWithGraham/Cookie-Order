@@ -15,19 +15,19 @@ public class OrderApp {
 
         CookieOrder krisOrder = new CookieOrder("Thin Mints", 3);
         CookieOrder donaldOrder = new CookieOrder("Tagalongs", 10);
+        CookieOrder adrianOrder = new CookieOrder("Thin Mints", 15);
 
         MasterOrder beckyOrderSheet = new MasterOrder();
 
         beckyOrderSheet.addOrder(krisOrder);
         beckyOrderSheet.addOrder(donaldOrder);
+        beckyOrderSheet.addOrder(adrianOrder);
 
         System.out.println("Current Order");
         System.out.println(beckyOrderSheet.getOrders());
         System.out.println(beckyOrderSheet.getTotalBoxes());
-        // System.out.println("Variety: " + orders.get(0));
-        // System.out.println("Variety: " + orders.get(1));
-        // System.out.println("Variety: " + orders.get(2));
-        // System.out.println("Variety: " + orders.get(3));
+        // System.out.println(beckyOrderSheet.getVarietyBoxes());
+
         yummy.close();
 
     }
