@@ -29,6 +29,18 @@ public class MasterOrder {
 
     }
 
+    public int getVarietyBoxes(String varietyBoxName) {
+        int numberOfBoxesForVariety = 0;
+        for (int orderIncrementor = 0; orderIncrementor < orders.size(); orderIncrementor++) {
+            CookieOrder orderAtThisIndex = orders.get(orderIncrementor);
+            String cookieName = orderAtThisIndex.getVarietyOfCookie();
+            if (cookieName.equalsIgnoreCase(varietyBoxName)) {
+                numberOfBoxesForVariety += orderAtThisIndex.getNumBoxes();
+            }
+        }
+        return numberOfBoxesForVariety;
+    }
+
     public void removeVariety(String varietyToRemove) {
         int counter = 0;
         while (counter < orders.size()) {
@@ -56,12 +68,8 @@ public class MasterOrder {
     }
 
     public void showOrder() {
-
+        for (CookieOrder order : orders) {
+            System.out.println("Variety: " + order.getVarietyOfCookie() + " Boxes: " + order.getNumBoxes());
+        }
     }
-
-    // @Override
-    // public String toString()
-    // }
-
-    // public abstract String CookieOrder();
 }
